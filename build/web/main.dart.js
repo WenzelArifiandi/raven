@@ -58135,9 +58135,9 @@ s.pushState(new P.y7([],[]).fY(null),"InputPage","/")},
 E:function(a,b){var s,r,q=null,p=t.fQ
 p=T.kY(H.b([new T.aP(C.wt,T.kY(H.b([L.bh("Hi there.",C.Bz,q),T.ov(q,10,q),L.bh("",C.rX,q)],p),C.cK,C.b8,C.bo),q)],p),C.cb,C.b8,C.bo)
 s=L.bh("Explore",C.rX,q)
-r=L.dc(C.wO,new P.z(4294066255))
+r=L.dc(C.wO,new P.z(4294066742))
 s=H.b([C.zJ,r,C.zL,s,C.zK],t.E)
-return M.eI(q,M.WH(q,new T.aP(new V.aE(15,25,15,15),p,q),new T.aP(C.pm,new E.rE(new E.Gx(T.Wx(s,C.cb,C.b8,C.ko),q),new V.a1K(this,b),C.lc,!0,C.u7,q),q),C.v3,this.d),q,q,new S.dV(q,new X.AL(new L.qE("images/fuji.jpg"),C.oK),q,q,q,q,C.ab),q,q,q,q,q)},
+return M.eI(q,M.WH(q,new T.aP(new V.aE(15,25,15,15),p,q),new T.aP(C.pm,new E.rE(new E.Gx(T.Wx(s,C.cb,C.b8,C.ko),q),new V.a1K(this,b),C.lc,!0,C.u7,q),q),C.v3,this.d),q,q,new S.dV(q,new X.AL(new L.qE("images/Blue times Two Squooshed.jpg"),C.oK),q,q,q,q,C.ab),q,q,q,q,q)},
 Yp:function(a){var s,r,q,p,o,n,m,l=null,k=K.kN(10),j=K.eV(a,!1),i=j.c
 i.toString
 i=M.aca(a,i)
@@ -58156,11 +58156,11 @@ $C:"$0",
 $R:0,
 $S:5}
 V.a1J.prototype={
-$1:function(a){var s,r,q=null,p=4294066255,o=L.bh("About",C.aJ,q),n=L.dc(C.pu,new P.z(p)),m=L.dc(C.pu,new P.z(p)),l=K.kN(30),k=t.fQ
+$1:function(a){var s,r,q=null,p=4294066742,o=L.bh("About",C.aJ,q),n=L.dc(C.pu,new P.z(p)),m=L.dc(C.pu,new P.z(p)),l=K.kN(30),k=t.fQ
 l=H.b([new T.aP(new V.aE(50,5,0,5),M.eI(q,L.bh("The Raven Project is my personal website to explore the use of Flutter, Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",q,q),q,q,new S.dV(q,q,q,l,q,q,C.ab),q,q,q,q,q),q)],k)
 s=Q.e_(q,L.dc(C.wQ,new P.z(p)),V.arR(),!1,q,L.bh("Email me",C.aJ,q))
 r=L.bh("Meet",C.aJ,q)
-return T.ac1(C.ts,new T.aP(C.pm,B.a8_(H.b([new T.aP(C.wq,new A.z7(n,o,"The Raven Project","Mountain View 2.11",m,"\xa92021 Wenzel Arifiandi",l,q),q),new T.aP(C.C,new T.bG(C.aM,s,q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.wR,new P.z(p)),V.arN(),!1,q,r),q),q),Z.abG(new P.z(0)),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arH(),!1,q,L.bh("Automation of Manufacturing System",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arI(),!1,q,L.bh("Automation of Manufacturing System Laboratory",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arJ(),!1,q,L.bh("Bangkit",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arK(),!1,q,L.bh("Environment and Industrial Ecology",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arL(),!1,q,L.bh("Integrated System Design",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arM(),!1,q,L.bh("Integrated System Design - OneDrive",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arQ(),!1,q,L.bh("Occupational Safety and Health System Design",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arO(),!1,q,L.bh("Quality Control",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arP(),!1,q,L.bh("Research Methodology",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arS(),!1,q,L.bh("System Simulation",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arT(),!1,q,L.bh("System Simulation Laboratory",C.aJ,q)),q),q),new T.aP(C.C,U.a8n(L.dc(C.wP,new P.z(p)),new V.a1I(a)),q),Z.abG(new P.z(0))],k),q),q),0.6)},
+return T.ac1(C.ts,new T.aP(C.pm,B.a8_(H.b([new T.aP(C.wq,new A.z7(n,o,"The Raven Project","Mountain View 2.17.1",m,"\xa92021 Wenzel Arifiandi",l,q),q),new T.aP(C.C,new T.bG(C.aM,s,q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.wR,new P.z(p)),V.arN(),!1,q,r),q),q),Z.abG(new P.z(0)),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arH(),!1,q,L.bh("Automation of Manufacturing System",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arI(),!1,q,L.bh("Automation of Manufacturing System Laboratory",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arJ(),!1,q,L.bh("Bangkit",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arK(),!1,q,L.bh("Environment and Industrial Ecology",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arL(),!1,q,L.bh("Integrated System Design",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arM(),!1,q,L.bh("Integrated System Design - OneDrive",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arQ(),!1,q,L.bh("Occupational Safety and Health System Design",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arO(),!1,q,L.bh("Quality Control",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arP(),!1,q,L.bh("Research Methodology",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arS(),!1,q,L.bh("System Simulation",C.aJ,q)),q),q),new T.aP(C.C,new T.bG(C.aM,Q.e_(q,L.dc(C.b2,new P.z(p)),V.arT(),!1,q,L.bh("System Simulation Laboratory",C.aJ,q)),q),q),new T.aP(C.C,U.a8n(L.dc(C.wP,new P.z(p)),new V.a1I(a)),q),Z.abG(new P.z(0))],k),q),q),0.6)},
 $S:380}
 V.a1I.prototype={
 $0:function(){K.eV(this.a,!1).lq(0,null)
@@ -58175,11 +58175,11 @@ r=this.bn$
 if(r!=null)for(r=P.c9(r,r.r);r.t();)r.d.sd6(0,s)
 this.c3()}}
 F.DE.prototype={
-E:function(a,b){var s,r,q=4278520409,p=null,o=4279185906,n=4294830313
+E:function(a,b){var s,r,q=4278520409,p=null,o=4294830313
 X.Zr(H.b([],t.uD))
 s=A.k8(p,p,new P.z(q),p,p,p,p,p,p,p,p,p,p,p,p,p,!0,p,p,p,p,p,p)
 r=A.k8(p,p,new P.z(q),p,p,p,p,p,p,p,p,p,p,p,p,p,!0,p,p,p,p,p,p)
-r=X.adB(new P.z(n),new Q.nS(new P.z(o),p,p,p),new X.mY(new P.z(n),p,p,p,p,p),p,"GoogleSans",new P.z(o),C.bh,R.ZJ(p,A.k8(p,p,new P.z(q),p,p,p,p,p,p,p,p,p,p,p,p,p,!0,p,p,p,p,p,p),p,s,p,p,p,p,r,p,p,p,p))
+r=X.adB(new P.z(o),new Q.nS(new P.z(4278731404),p,p,p),new X.mY(new P.z(o),p,p,p,p,p),p,"GoogleSans",new P.z(4278394969),C.bh,R.ZJ(p,A.k8(p,p,new P.z(q),p,p,p,p,p,p,p,p,p,p,p,p,p,!0,p,p,p,p,p,p),p,s,p,p,p,p,r,p,p,p,p))
 return new S.tp(P.aQ(["/",new F.UP()],t.bi,t.gd),"/","It's Quiet Uptown",r,p)}}
 F.UP.prototype={
 $1:function(a){return new V.ln(null)},
