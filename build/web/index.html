@@ -56,6 +56,26 @@
     <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+    <!-- Firebase Configuration -->
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyA35BhKNYUhT_mXY7op0X6c7ejDIEkWh0g",
+        authDomain: "raven8.firebaseapp.com",
+        databaseURL: "https://raven8.firebaseio.com",
+        projectId: "raven8",
+        storageBucket: "raven8.appspot.com",
+        messagingSenderId: "577613908724",
+        appId: "1:577613908724:web:890c34d332f0be4175eca1",
+        measurementId: "G-DR0Q63K0TS"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {

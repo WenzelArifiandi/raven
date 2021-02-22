@@ -1,3 +1,9 @@
+#Wenzel
+google-services.json
+
+# web
+web/firebase-config.js
+
 # Miscellaneous
 *.class
 *.lock
