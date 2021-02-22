@@ -1,5 +1,6 @@
 #Wenzel
 google-services.json
+.firebase/
 
 # web
 web/firebase-config.js

@@ -22,7 +22,7 @@ class RavenApp extends StatelessWidget {
         // Check for errors
         if (snapshot.hasError) {
           return MaterialApp(
-            title: "Snapshot Error",
+            title: "It's Quiet Uptown | E",
             theme: buildThemeData(),
             // home: InputPage(),
             initialRoute: '/',
@@ -43,7 +43,7 @@ class RavenApp extends StatelessWidget {
 
         // Otherwise, show something whilst waiting for initialization to complete
         return MaterialApp(
-          title: "It's Quiet Uptown",
+          title: "It's Quiet Uptown | I",
           theme: buildThemeData(),
           // home: InputPage(),
           initialRoute: '/',
