@@ -14,6 +14,24 @@ Future<void> _meet1() async {
   }
 }
 
+Future<void> _github() async {
+  const url = 'https://go.wenzelarifiandi.com/github';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<void> _linkedin() async {
+  const url = 'https://go.wenzelarifiandi.com/linkedin';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _sendMail() async {
   const url = 'mailto:hello@wenzelarifiandi.com';
   if (await canLaunch(url)) {
@@ -252,7 +270,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                     applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                         color: buildIconColor()),
                     applicationName: 'The Raven Project',
-                    applicationVersion: 'Mountain View 2.22.1',
+                    applicationVersion: 'Mountain View 2.22.6',
                     applicationLegalese: '©2021 Wenzel Arifiandi',
                     aboutBoxChildren: <Widget>[
                       Padding(
@@ -282,10 +300,44 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                         color: buildIconColor(),
                       ),
                       title: Text(
-                        'Email me',
+                        'Email',
                         style: kSubtitle1Black,
                       ),
                       onTap: _sendMail,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxHeight: 60),
+                    child: ListTile(
+                      title: Text(
+                        'GitHub',
+                        style: kSubtitle1Black,
+                      ),
+                      leading: Icon(
+                        FontAwesomeIcons.github,
+                        color: buildIconColor(),
+                      ),
+                      onTap: _github,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxHeight: 60),
+                    child: ListTile(
+                      title: Text(
+                        'LinkedIn',
+                        style: kSubtitle1Black,
+                      ),
+                      leading: Icon(
+                        FontAwesomeIcons.linkedin,
+                        color: buildIconColor(),
+                      ),
+                      onTap: _linkedin,
                     ),
                   ),
                 ),
