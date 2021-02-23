@@ -270,7 +270,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                     applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                         color: buildIconColor()),
                     applicationName: 'The Raven Project',
-                    applicationVersion: 'Mountain View 2.22.7',
+                    applicationVersion: 'Mountain View 2.24',
                     applicationLegalese: '©2021 Wenzel Arifiandi',
                     aboutBoxChildren: <Widget>[
                       Padding(
