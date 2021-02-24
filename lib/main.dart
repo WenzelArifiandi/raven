@@ -16,7 +16,7 @@ class RavenApp extends StatelessWidget {
       // DeviceOrientation.portraitDown,
     ]);
     return MaterialApp(
-      title: "It's Quiet Uptown",
+      title: "Dare Mighty Things",
       theme: buildThemeData(),
       // home: InputPage(),
       initialRoute: '/',
