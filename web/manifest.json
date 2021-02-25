@@ -6,7 +6,7 @@
     "background_color": "#032059",
     "theme_color": "#032059",
     "description": "It's Quiet Uptown.",
-    "orientation": "portrait-primary",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
