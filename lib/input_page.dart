@@ -189,53 +189,55 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
   }
 
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('images/Blue times Two Squooshed.jpg'), fit: BoxFit.cover)),
-      child: Scaffold(
-        key: _scaffoldKey,
-        body: Padding(
-          padding: EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 15),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15.0, 0, 0, 0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Text(
-                      "Hi there.",
-                      style: kHeadline,
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Text(
-                      "",
-                      style: kSubtitle1,
-                    ),
-                  ],
+    return Scrollbar(
+      child: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('images/Blue times Two Squooshed.jpg'), fit: BoxFit.cover)),
+        child: Scaffold(
+          key: _scaffoldKey,
+          body: Padding(
+            padding: EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 15),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15.0, 0, 0, 0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        "Hi there.",
+                        style: kHeadline,
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        "",
+                        style: kSubtitle1,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+          floatingActionButton: Padding(
+            padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+            child: FloatingActionButton.extended(
+                onPressed: () {
+                  buildShowModalBottomSheet(context);
+                },
+                label: Text('Explore', style: kSubtitle1),
+                // backgroundColor: Color(0xFF3692BF),
+                icon: Icon(
+                  FontAwesomeIcons.compass,
+                  color: buildIconColor(),
+                )),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
         ),
-        floatingActionButton: Padding(
-          padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-          child: FloatingActionButton.extended(
-              onPressed: () {
-                buildShowModalBottomSheet(context);
-              },
-              label: Text('Explore', style: kSubtitle1),
-              // backgroundColor: Color(0xFF3692BF),
-              icon: Icon(
-                FontAwesomeIcons.compass,
-                color: buildIconColor(),
-              )),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       ),
     );
   }
@@ -254,310 +256,312 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
           //child: Center(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-            child: ListView(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 0),
-                  child: AboutListTile(
-                    child: Text(
-                      'About',
-                      style: kSubtitle1Black,
-                    ),
-                    icon: Icon(
-                      FontAwesomeIcons.firstdraft,
-                      color: buildIconColor(),
-                    ),
-                    applicationIcon: Icon(FontAwesomeIcons.firstdraft,
-                        color: buildIconColor()),
-                    applicationName: 'The Raven Project',
-                    applicationVersion: 'Mountain View 3.4',
-                    applicationLegalese: '©2021 Wenzel Arifiandi',
-                    aboutBoxChildren: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(50.0, 5.0, 0.0, 5.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30.0),
+            child: Scrollbar(
+              child: ListView(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10.0, 0, 0),
+                    child: AboutListTile(
+                      child: Text(
+                        'About',
+                        style: kSubtitle1Black,
+                      ),
+                      icon: Icon(
+                        FontAwesomeIcons.firstdraft,
+                        color: buildIconColor(),
+                      ),
+                      applicationIcon: Icon(FontAwesomeIcons.firstdraft,
+                          color: buildIconColor()),
+                      applicationName: 'The Raven Project',
+                      applicationVersion: 'Mountain View 3.4.1',
+                      applicationLegalese: '©2021 Wenzel Arifiandi',
+                      aboutBoxChildren: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(50.0, 5.0, 0.0, 5.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            child: Text(
+                                'The Raven Project is my personal website to explore the use of Flutter,'
+                                ' Google\'s UI toolkit for building beautiful, '
+                                'natively compiled applications for mobile, web, and desktop '
+                                'from a single codebase.'),
                           ),
-                          child: Text(
-                              'The Raven Project is my personal website to explore the use of Flutter,'
-                              ' Google\'s UI toolkit for building beautiful, '
-                              'natively compiled applications for mobile, web, and desktop '
-                              'from a single codebase.'),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        FontAwesomeIcons.paperPlane,
+                
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          FontAwesomeIcons.paperPlane,
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Email',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _sendMail,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'GitHub',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.github,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _github,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'LinkedIn',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.linkedin,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _linkedin,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'Meet',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.userAstronaut,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _meet1,
+                      ),
+                    ),
+                  ),
+                  Divider(color: Color(0x00000000)),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Automation of Manufacturing System',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _automation,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Automation of Manufacturing System Laboratory',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _automationLAB,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Bangkit',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _bangkit,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Environment and Industrial Ecology',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _environment,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Integrated System Design',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _integratedSystems,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Integrated System Design - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _integratedSystemsOne,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Occupational Safety and Health System Design',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _safety,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Quality Control',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _qc,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Research Methodology',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _research,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'System Simulation',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _simulation,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'System Simulation Laboratory',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _simulationLAB,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: TextButton(
+                      child: Icon(
+                        FontAwesomeIcons.timesCircle,
                         color: buildIconColor(),
                       ),
-                      title: Text(
-                        'Email',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _sendMail,
+                      onPressed: () => Navigator.pop(context),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      title: Text(
-                        'GitHub',
-                        style: kSubtitle1Black,
-                      ),
-                      leading: Icon(
-                        FontAwesomeIcons.github,
-                        color: buildIconColor(),
-                      ),
-                      onTap: _github,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      title: Text(
-                        'LinkedIn',
-                        style: kSubtitle1Black,
-                      ),
-                      leading: Icon(
-                        FontAwesomeIcons.linkedin,
-                        color: buildIconColor(),
-                      ),
-                      onTap: _linkedin,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      title: Text(
-                        'Meet',
-                        style: kSubtitle1Black,
-                      ),
-                      leading: Icon(
-                        FontAwesomeIcons.userAstronaut,
-                        color: buildIconColor(),
-                      ),
-                      onTap: _meet1,
-                    ),
-                  ),
-                ),
-                Divider(color: Color(0x00000000)),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Automation of Manufacturing System',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _automation,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Automation of Manufacturing System Laboratory',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _automationLAB,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Bangkit',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _bangkit,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Environment and Industrial Ecology',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _environment,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Integrated System Design',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _integratedSystems,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Integrated System Design - OneDrive',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _integratedSystemsOne,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Occupational Safety and Health System Design',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _safety,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Quality Control',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _qc,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'Research Methodology',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _research,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'System Simulation',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _simulation,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 60),
-                    child: ListTile(
-                      leading: Icon(
-                        buildCloud(),
-                        color: buildIconColor(),
-                      ),
-                      title: Text(
-                        'System Simulation Laboratory',
-                        style: kSubtitle1Black,
-                      ),
-                      onTap: _simulationLAB,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  child: TextButton(
-                    child: Icon(
-                      FontAwesomeIcons.timesCircle,
-                      color: buildIconColor(),
-                    ),
-                    onPressed: () => Navigator.pop(context),
-                  ),
-                ),
-                Divider(color: Color(0x00000000)),
-              ],
+                  Divider(color: Color(0x00000000)),
+                ],
+              ),
             ),
           ),
           //),
