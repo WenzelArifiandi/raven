@@ -1,4 +1,4 @@
-import 'dart:html' as html;
+// import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'constants.dart';
 // import 'reusable_button.dart';
@@ -185,7 +185,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    html.window.history.pushState(null, "InputPage", "/");
+    // html.window.history.pushState(null, "InputPage", "/");
   }
 
   Widget build(BuildContext context) {
@@ -270,7 +270,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                     applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                         color: buildIconColor()),
                     applicationName: 'The Raven Project',
-                    applicationVersion: 'Mountain View 2.26',
+                    applicationVersion: 'Mountain View 3.4',
                     applicationLegalese: '©2021 Wenzel Arifiandi',
                     aboutBoxChildren: <Widget>[
                       Padding(
