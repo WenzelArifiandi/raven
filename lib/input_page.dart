@@ -32,6 +32,15 @@ Future<void> _linkedin() async {
   }
 }
 
+Future<void> _researchGate() async {
+  const url = 'https://go.wenzelarifiandi.com/researchgate';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _sendMail() async {
   const url = 'mailto:hello@wenzelarifiandi.com';
   if (await canLaunch(url)) {
@@ -273,7 +282,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 3.4.1',
+                      applicationVersion: 'Mountain View 3.5',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -338,6 +347,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                         ),
                         leading: Icon(
                           FontAwesomeIcons.linkedin,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _linkedin,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'ResearchGate',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.researchgate,
                           color: buildIconColor(),
                         ),
                         onTap: _linkedin,
