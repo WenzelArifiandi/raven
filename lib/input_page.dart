@@ -50,6 +50,19 @@ Future<void> _sendMail() async {
   }
 }
 
+Future<void> _asana() async {
+  const url = 'https://go.wenzelarifiandi.com/asana';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _automation() async {
   const url = 'https://drive.wenzelarifiandi.com/automation';
   if (await canLaunch(url)) {
@@ -282,7 +295,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 3.6',
+                      applicationVersion: 'Mountain View 3.9',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -388,6 +401,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                     ),
                   ),
                   Divider(color: Color(0x00000000)),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          FontAwesomeIcons.tasks,
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Asana',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _asana,
+                      ),
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: ConstrainedBox(
