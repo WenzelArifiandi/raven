@@ -50,6 +50,33 @@ Future<void> _researchGate() async {
   }
 }
 
+Future<void> _skype() async {
+  const url = 'https://go.wenzelarifiandi.com/skype';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<void> _teams() async {
+  const url = 'https://go.wenzelarifiandi.com/teams';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<void> _zoom() async {
+  const url = 'https://go.wenzelarifiandi.com/zoom';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _sendMail() async {
   const url = 'mailto:hello@wenzelarifiandi.com';
   if (await canLaunch(url)) {
@@ -313,7 +340,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 3.11.5',
+                      applicationVersion: 'Mountain View 4.9',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -432,6 +459,58 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           color: buildIconColor(),
                         ),
                         onTap: _meetPST,
+                      ),
+                    ),
+                  ),
+                  Divider(color: Color(0x00000000)),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'Skype',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.skype,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _skype,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'Teams',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.microsoft,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _teams,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'Zoom',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.userAstronaut,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _zoom,
                       ),
                     ),
                   ),
