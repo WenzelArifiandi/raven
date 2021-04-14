@@ -138,6 +138,19 @@ Future<void> _bangkit() async {
   }
 }
 
+Future<void> _detect() async {
+  const url = 'https://drive.wenzelarifiandi.com/detect';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _environment() async {
   const url = 'https://drive.wenzelarifiandi.com/environment';
   if (await canLaunch(url)) {
@@ -340,7 +353,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 4.9',
+                      applicationVersion: 'Mountain View 4.14',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -580,6 +593,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _bangkit,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'DETECT',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _detect,
                       ),
                     ),
                   ),
