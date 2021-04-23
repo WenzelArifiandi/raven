@@ -151,6 +151,19 @@ Future<void> _detect() async {
   }
 }
 
+Future<void> _detectOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/detect';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _environment() async {
   const url = 'https://drive.wenzelarifiandi.com/environment';
   if (await canLaunch(url)) {
@@ -353,7 +366,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 4.14',
+                      applicationVersion: 'Mountain View 4.24',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -610,6 +623,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _detect,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'DETECT - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _detectOne,
                       ),
                     ),
                   ),
