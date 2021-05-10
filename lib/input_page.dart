@@ -265,6 +265,19 @@ Future<void> _simulationLAB() async {
   }
 }
 
+Future<void> _simulationLABOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/simulationLAB';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 const bottomContainerColour = Colors.lime;
 Color buildIconColor() => Color(0xFFF24236);
 
@@ -366,7 +379,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 4.24',
+                      applicationVersion: 'Mountain View 5.10',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -793,6 +806,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _simulationLAB,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'System Simulation Laboratory - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _simulationLABOne,
                       ),
                     ),
                   ),
