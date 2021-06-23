@@ -239,6 +239,19 @@ Future<void> _research() async {
   }
 }
 
+Future<void> _researchOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/research';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _simulation() async {
   const url = 'https://drive.wenzelarifiandi.com/simulation';
   if (await canLaunch(url)) {
@@ -379,7 +392,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 5.10',
+                      applicationVersion: 'Mountain View 6.23',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -772,6 +785,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _research,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Research Methodology - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _researchOne,
                       ),
                     ),
                   ),
