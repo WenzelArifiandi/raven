@@ -204,6 +204,15 @@ Future<void> _internship() async {
   }
 }
 
+Future<void> _internshipOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/internship';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _safety() async {
   const url = 'https://drive.wenzelarifiandi.com/safety';
   if (await canLaunch(url)) {
@@ -392,7 +401,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 6.23',
+                      applicationVersion: 'Mountain View 8.2',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -583,24 +592,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                         onTap: _asana,
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'Automation of Manufacturing System',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _automation,
-                      ),
-                    ),
-                  ),
+                  ),                
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: ConstrainedBox(
@@ -668,24 +660,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                         onTap: _detectOne,
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'Environment and Industrial Ecology',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _environment,
-                      ),
-                    ),
-                  ),
+                  ),                  
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: ConstrainedBox(
@@ -747,27 +722,10 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           color: buildIconColor(),
                         ),
                         title: Text(
-                          'Occupational Safety and Health System Design',
+                          'Internship - OneDrive',
                           style: kSubtitle1Black,
                         ),
-                        onTap: _safety,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'Quality Control',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _qc,
+                        onTap: _internshipOne,
                       ),
                     ),
                   ),
@@ -802,57 +760,6 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _researchOne,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'System Simulation',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _simulation,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'System Simulation Laboratory',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _simulationLAB,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
-                          'System Simulation Laboratory - OneDrive',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _simulationLABOne,
                       ),
                     ),
                   ),
