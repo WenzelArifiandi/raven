@@ -23,6 +23,15 @@ Future<void> _meetPST() async {
   }
 }
 
+Future<void> _meetInternship() async {
+  const url = 'https://meet.wenzelarifiandi.com/internship';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 Future<void> _github() async {
   const url = 'https://go.wenzelarifiandi.com/github';
   if (await canLaunch(url)) {
@@ -401,7 +410,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 8.2',
+                      applicationVersion: 'Mountain View 8.3',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -520,6 +529,23 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           color: buildIconColor(),
                         ),
                         onTap: _meetPST,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        title: Text(
+                          'Meet - Internship',
+                          style: kSubtitle1Black,
+                        ),
+                        leading: Icon(
+                          FontAwesomeIcons.userAstronaut,
+                          color: buildIconColor(),
+                        ),
+                        onTap: _meetInternship,
                       ),
                     ),
                   ),
