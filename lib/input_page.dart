@@ -14,24 +14,6 @@ Future<void> _meet1() async {
   }
 }
 
-Future<void> _meetPST() async {
-  const url = 'https://meet.wenzelarifiandi.com/pst';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
-Future<void> _meetInternship() async {
-  const url = 'https://meet.wenzelarifiandi.com/internship';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
-
 Future<void> _github() async {
   const url = 'https://go.wenzelarifiandi.com/github';
   if (await canLaunch(url)) {
@@ -108,31 +90,7 @@ Future<void> _asana() async {
   }
 }
 
-Future<void> _automation() async {
-  const url = 'https://drive.wenzelarifiandi.com/automation';
-  if (await canLaunch(url)) {
-    await launch(
-      url,
-      forceSafariVC: true,
-      forceWebView: true,
-    );
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
-Future<void> _automationLAB() async {
-  const url = 'https://drive.wenzelarifiandi.com/automationLAB';
-  if (await canLaunch(url)) {
-    await launch(
-      url,
-      forceSafariVC: true,
-      forceWebView: true,
-    );
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
 Future<void> _bangkit() async {
   const url = 'https://drive.wenzelarifiandi.com/bangkit';
@@ -173,8 +131,21 @@ Future<void> _detectOne() async {
   }
 }
 
-Future<void> _environment() async {
-  const url = 'https://drive.wenzelarifiandi.com/environment';
+Future<void> _enterpriseDesign() async {
+  const url = 'https://drive.wenzelarifiandi.com/enterprise-design';
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+    );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<void> _layoutDesign() async {
+  const url = 'https://drive.wenzelarifiandi.com/layout-design';
   if (await canLaunch(url)) {
     await launch(
       url,
@@ -222,27 +193,7 @@ Future<void> _internshipOne() async {
   }
 }
 
-Future<void> _safety() async {
-  const url = 'https://drive.wenzelarifiandi.com/safety';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
-Future<void> _qc() async {
-  const url = 'https://drive.wenzelarifiandi.com/qualitycontrol';
-  if (await canLaunch(url)) {
-    await launch(
-      url,
-      forceSafariVC: true,
-      forceWebView: true,
-    );
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
 Future<void> _research() async {
   const url = 'https://drive.wenzelarifiandi.com/research';
@@ -270,8 +221,8 @@ Future<void> _researchOne() async {
   }
 }
 
-Future<void> _simulation() async {
-  const url = 'https://drive.wenzelarifiandi.com/simulation';
+Future<void> _asistenPST() async {
+  const url = 'https://drive.wenzelarifiandi.com/pst-drive';
   if (await canLaunch(url)) {
     await launch(
       url,
@@ -283,8 +234,8 @@ Future<void> _simulation() async {
   }
 }
 
-Future<void> _simulationLAB() async {
-  const url = 'https://drive.wenzelarifiandi.com/simulationLAB';
+Future<void> _asistenPSTWenzel() async {
+  const url = 'https://drive.wenzelarifiandi.com/pst-wenzel';
   if (await canLaunch(url)) {
     await launch(
       url,
@@ -296,8 +247,8 @@ Future<void> _simulationLAB() async {
   }
 }
 
-Future<void> _simulationLABOne() async {
-  const url = 'https://onedrive.wenzelarifiandi.com/simulationLAB';
+Future<void> _asistenPSTOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/pst-onedrive';
   if (await canLaunch(url)) {
     await launch(
       url,
@@ -410,7 +361,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 8.3',
+                      applicationVersion: 'Mountain View 10.11',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -515,41 +466,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        title: Text(
-                          'Meet - PST',
-                          style: kSubtitle1Black,
-                        ),
-                        leading: Icon(
-                          FontAwesomeIcons.userAstronaut,
-                          color: buildIconColor(),
-                        ),
-                        onTap: _meetPST,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        title: Text(
-                          'Meet - Internship',
-                          style: kSubtitle1Black,
-                        ),
-                        leading: Icon(
-                          FontAwesomeIcons.userAstronaut,
-                          color: buildIconColor(),
-                        ),
-                        onTap: _meetInternship,
-                      ),
-                    ),
-                  ),
-                  Divider(color: Color(0x00000000)),
+                Divider(color: Color(0x00000000)),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: ConstrainedBox(
@@ -629,23 +546,6 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           color: buildIconColor(),
                         ),
                         title: Text(
-                          'Automation of Manufacturing System Laboratory',
-                          style: kSubtitle1Black,
-                        ),
-                        onTap: _automationLAB,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 60),
-                      child: ListTile(
-                        leading: Icon(
-                          buildCloud(),
-                          color: buildIconColor(),
-                        ),
-                        title: Text(
                           'Bangkit',
                           style: kSubtitle1Black,
                         ),
@@ -684,6 +584,40 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _detectOne,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          '[APP] Enterprise Analysis and Design',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _enterpriseDesign,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          '[PTLF] Facility Layout Design',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _layoutDesign,
                       ),
                     ),
                   ),                  
@@ -786,6 +720,57 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                           style: kSubtitle1Black,
                         ),
                         onTap: _researchOne,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Teaching Assistant',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _asistenPST,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Teaching Assistant - Wenzel',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _asistenPSTWenzel,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          'Teaching Assistant - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _asistenPSTOne,
                       ),
                     ),
                   ),
