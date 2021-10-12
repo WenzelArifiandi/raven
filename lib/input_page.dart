@@ -90,8 +90,6 @@ Future<void> _asana() async {
   }
 }
 
-
-
 Future<void> _bangkit() async {
   const url = 'https://drive.wenzelarifiandi.com/bangkit';
   if (await canLaunch(url)) {
@@ -152,6 +150,15 @@ Future<void> _layoutDesign() async {
       forceSafariVC: true,
       forceWebView: true,
     );
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+Future<void> _layoutDesignOne() async {
+  const url = 'https://onedrive.wenzelarifiandi.com/layout-design';
+  if (await canLaunch(url)) {
+    await launch(url);
   } else {
     throw 'Could not launch $url';
   }
@@ -361,7 +368,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: 'Mountain View 10.11',
+                      applicationVersion: 'Mountain View 10.12',
                       applicationLegalese: '©2021 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
@@ -620,7 +627,21 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                         onTap: _layoutDesign,
                       ),
                     ),
-                  ),                  
+                  ),
+                  ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 60),
+                      child: ListTile(
+                        leading: Icon(
+                          buildCloud(),
+                          color: buildIconColor(),
+                        ),
+                        title: Text(
+                          '[PTLF] Facility Layout Design - OneDrive',
+                          style: kSubtitle1Black,
+                        ),
+                        onTap: _layoutDesignOne,
+                      ),
+                    ),                  
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: ConstrainedBox(

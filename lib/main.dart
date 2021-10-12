@@ -34,11 +34,10 @@ class RavenApp extends StatelessWidget {
       ),
       primaryColor: Color(0xFF032059),
       bannerTheme: MaterialBannerThemeData(backgroundColor: Color(0xFF08428C)),
-      accentColor: Color(0xFFFDE8E9),
       scaffoldBackgroundColor: Colors.transparent,
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: Color(0xFFFDE8E9),
-      ),
+      ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFDE8E9)),
     );
   }
 }

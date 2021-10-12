@@ -23,11 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.0.2
-  cupertino_icons: ^1.0.2
-  font_awesome_flutter: ^9.0.0-nullsafety
+  url_launcher: ^6.0.12
+  cupertino_icons: ^1.0.3
+  font_awesome_flutter: ^9.1.0-nullsafety
   firebase_core: ^1.0.0
-  firebase_analytics: ^8.1.2
+  firebase_analytics: ^8.3.2
   
 dev_dependencies:
   flutter_test:
@@ -48,12 +48,18 @@ flutter:
     - images/
     # - assets/audios/
   fonts:
-    # - family: Ubuntu
-    #   fonts:
-    #     - asset: fonts/Ubuntu-Regular.ttf
     - family: GoogleSans
       fonts:
         - asset: fonts/GoogleSans-Regular.ttf
+    - family: SFMedium
+      fonts:
+        - asset: fonts/SF-UI-Display-Medium.ttf
+    - family: Autography
+      fonts:
+        - asset: fonts/Autography.otf
+    # - family: Ubuntu
+    #   fonts:
+    #     - asset: fonts/Ubuntu-Regular.ttf
     # - family: GoogleSansMedium
     #   fonts:
     #     - asset: fonts/GoogleSans-Medium.ttf
@@ -66,15 +72,9 @@ flutter:
     # - family: SFRegular
     #   fonts:
     #     - asset: fonts/SF-UI-Display-Regular.ttf
-    - family: SFMedium
-      fonts:
-        - asset: fonts/SF-UI-Display-Medium.ttf
     # - family: SFBold
     #   fonts:
     #     - asset: fonts/SF-UI-Display-Bold.otf
-    - family: Autography
-      fonts:
-        - asset: fonts/Autography.otf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
