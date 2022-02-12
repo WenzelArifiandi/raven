@@ -38,6 +38,7 @@ class RavenApp extends StatelessWidget {
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: Color(0xFFFDE8E9),
       ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFDE8E9)),
+      //0xFFFDE8E9
     );
   }
 }
