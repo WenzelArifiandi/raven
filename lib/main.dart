@@ -37,7 +37,9 @@ class RavenApp extends StatelessWidget {
       scaffoldBackgroundColor: Colors.transparent,
       bottomSheetTheme: BottomSheetThemeData(
         backgroundColor: Color(0xFFFDE8E9),
-      ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFDE8E9)),
+      ),
+      colorScheme:
+          ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFDE8E9)),
       //0xFFFDE8E9
     );
   }
