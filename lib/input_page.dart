@@ -192,7 +192,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: '2023.1',
+                      applicationVersion: '2023.2',
                       applicationLegalese: '©2023 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(
