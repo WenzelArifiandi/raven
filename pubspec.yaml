@@ -23,11 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_launcher: ^6.0.12
+  url_launcher: ^6.1.14
   cupertino_icons: ^1.0.3
-  font_awesome_flutter: ^9.1.0-nullsafety
-  firebase_core: ^1.0.0
-  firebase_analytics: ^9.1.0
+  font_awesome_flutter: ^10.6.0
+  firebase_core: ^2.19.0
+  firebase_analytics: ^10.6.1
   
 dev_dependencies:
   flutter_test:
