@@ -25,21 +25,22 @@ class RavenApp extends StatelessWidget {
   }
 
   ThemeData buildThemeData() {
-    return ThemeData(
-      fontFamily: 'GoogleSans',
-      textTheme: TextTheme(
-        bodySmall: TextStyle(color: Color(0xFF050A59)),
-        headlineSmall: TextStyle(color: Color(0xFF050A59)),
-        bodyMedium: TextStyle(color: Color(0xFF050A59)),
+    final baseTheme = ThemeData();
+    return baseTheme.copyWith(
+      textTheme: baseTheme.textTheme.apply(
+        fontFamily: 'GoogleSans',
+        bodyColor: Color(0xFF183F8C),
+        displayColor: Color(0xFF183F8C),
       ),
-      primaryColor: Color(0xFF032059),
-      bannerTheme: MaterialBannerThemeData(backgroundColor: Color(0xFF08428C)),
+      primaryColor: Colors.white,
+      canvasColor: Colors.white,
+      bannerTheme: MaterialBannerThemeData(backgroundColor: Colors.white),
       scaffoldBackgroundColor: Colors.transparent,
       bottomSheetTheme: BottomSheetThemeData(
-        backgroundColor: Color(0xFFFDE8E9),
+        backgroundColor: Color(0xFF183F8C),
       ),
-      colorScheme:
-          ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFDE8E9)),
+      colorScheme: ColorScheme.fromSwatch()
+          .copyWith(secondary: Color(0xFFFDE8E9), background: Colors.white),
       //0xFFFDE8E9
     );
   }

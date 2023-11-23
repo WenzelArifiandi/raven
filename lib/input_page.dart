@@ -91,7 +91,7 @@ Future<void> _asana() async {
 }
 
 const bottomContainerColour = Colors.lime;
-Color buildIconColor() => Color(0xFFF24236);
+Color buildIconColor() => Color(0xFFBF784E);
 
 class InputPage extends StatefulWidget {
   @override
@@ -111,7 +111,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
       child: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/Blue times Two Squooshed.jpg'),
+                image: AssetImage('images/Webb Squooshed.jpg'),
                 fit: BoxFit.cover)),
         child: Scaffold(
           key: _scaffoldKey,
@@ -148,11 +148,11 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                 onPressed: () {
                   buildShowModalBottomSheet(context);
                 },
-                label: Text('Explore', style: kSubtitle1),
-                // backgroundColor: Color(0xFF3692BF),
+                label: Text('Explore', style: kSubtitle1White),
+                backgroundColor: Color(0xFF183F8C),
                 icon: Icon(
                   FontAwesomeIcons.compass,
-                  color: buildIconColor(),
+                  color: Color(0xFFBF784E),
                 )),
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
@@ -192,7 +192,7 @@ class _InputPageState extends State<InputPage> with TickerProviderStateMixin {
                       applicationIcon: Icon(FontAwesomeIcons.firstdraft,
                           color: buildIconColor()),
                       applicationName: 'The Raven Project',
-                      applicationVersion: '2023.2',
+                      applicationVersion: '2023.3.1',
                       applicationLegalese: '©2023 Wenzel Arifiandi',
                       aboutBoxChildren: <Widget>[
                         Padding(

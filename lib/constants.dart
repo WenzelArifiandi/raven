@@ -20,9 +20,15 @@ const kSubtitle1 = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
-const kSubtitle1Black = TextStyle(
+const kSubtitle1White = TextStyle(
   fontSize: 17,
-  color: Color(0xFF050A59),
-  fontFamily: 'SFMedium',
-  //fontWeight: FontWeight.w500
+  color: Colors.white,
+  fontFamily: 'GoogleSans',
+  fontWeight: FontWeight.w600,
 );
+
+const kSubtitle1Black = TextStyle(
+    fontSize: 17,
+    color: Colors.white,
+    fontFamily: 'GoogleSans',
+    fontWeight: FontWeight.w600);
